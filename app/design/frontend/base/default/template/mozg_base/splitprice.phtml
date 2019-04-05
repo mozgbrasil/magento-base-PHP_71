@@ -1,0 +1,87 @@
+<style type="text/css">
+    .cart-collaterals .cart-installment{text-align: right!important;display: block;margin-right: 15px;}
+</style>
+
+<div class="mozg_splitprice">
+<?php
+    $current_url = $this->helper('core/url')->getCurrentUrl();
+
+    $current_page = false;
+
+    if (Mage::registry('current_category')){
+      // category page
+        $current_page = 'category';
+    }
+    if(Mage::registry('current_product')) {
+      // Product detail page
+        $current_page = 'product';
+    }
+    if(stripos($current_url, 'checkout')){
+        $current_page = 'checkout';
+    }
+    if(stripos($current_url, 'onepage')){
+        $current_page = 'onepage';
+    }
+    if(stripos($current_url, 'search')){
+        $current_page = 'search';
+    }
+
+    $isActive = Mage::getStoreConfig('mozg_general/resources/active_split_price');
+
+    $price_on_pages = 'category,product,cart,checkout,search';
+    $allowed_page = explode(",",$price_on_pages);
+    //$divider = 3;
+    $text = 'Sem juros';
+    $currentCurrencyCode = Mage::app()->getLocale()->currency(Mage::app()->getStore()->getCurrentCurrencyCode())->getSymbol();
+
+    if( $isActive==1 && in_array($current_page, $allowed_page) ){
+
+        if( $current_page == "cart" || $current_page=="checkout" || $current_page=="onepage" ){
+
+            //$segment = ROUND((float)Mage::getSingleton('checkout/cart')->getQuote()->getGrandTotal() / $divider,2);
+
+            echo $this->getChildHtml('child');
+
+        }else{
+
+            $_product = $this->getProduct();
+
+            $getAttribute = $_product->getResource()->getAttribute('parcelas');
+
+            if( !empty($getAttribute) ){
+                $parcela = $getAttribute->getFrontend()->getValue($_product);
+            }
+
+            if( !empty($parcela) ){
+                $divider = $parcela;
+
+                $formattedPrice = Mage::helper('core')->currency($_product->getFinalPrice(), false, false);
+
+                $segment = ROUND((float)$formattedPrice / $divider,2);
+                //$segment = ROUND((float)$_product->getFinalPrice() / $divider,2);
+            }
+
+            echo $this->getChildHtml('child'.$this->getProduct()->getId());
+
+        }
+
+        if( !empty($segment) ){
+            $response = <<<EOF
+<div class="price-box">
+    <span class="regular-price">
+        $divider x  <span class="product-installments">$currentCurrencyCode $segment</span> $text
+    </span>
+</div>
+EOF;
+            echo $response;
+        }
+
+    } else {
+        if($current_page == "cart" || $current_page=="checkout" || $current_page=="onepage"){
+            echo $this->getChildHtml('child');
+        }else{
+            echo $this->getChildHtml('child'.$this->getProduct()->getId());
+        }
+    }
+?>
+</div>

@@ -1,0 +1,298 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 Mozg. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+-->
+<config>
+    <tabs>
+        <mozg translate="label" module="mozg_base">
+            <label>Mozg</label>
+            <sort_order>8000</sort_order>
+        </mozg>
+    </tabs>
+    <sections>
+        <mozg_general translate="label" module="mozg_base">
+            <header_css>header-section-mozg_general</header_css>
+            <class>separator-top section-mozg_general</class>
+            <label>General</label>
+            <tab>mozg</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>100</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <resources translate="label" module="mozg_base">
+                    <label>Configurações Padrão</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <expanded>1</expanded>
+                    <fields>
+                        <mozg_base_group_1 type="group" translate="label comment tooltip" module="mozg_base">
+                            <label>Recursos</label>
+                            <frontend_type>text</frontend_type>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <sort_order>10</sort_order>
+                            <frontend_model>mozg_base/adminhtml_system_config_fieldset_expanded</frontend_model>
+                            <fields>
+                                <active_split_price translate="label" module="mozg_base">
+                                    <label>Exibir parcela do produto</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-base-php_71#-ativar-estilo-ao-iwd_opc" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>select</frontend_type>
+                                    <source_model>adminhtml/system_config_source_yesno</source_model>
+                                    <config_path>mozg_general/resources/active_split_price</config_path>
+                                    <sort_order>19</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </active_split_price>
+                                <active_style_iwd_opc translate="label" module="mozg_base">
+                                    <label>Ativar estilo ao IWD_Opc</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-base-php_71#-ativar-estilo-ao-iwd_opc" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>select</frontend_type>
+                                    <source_model>adminhtml/system_config_source_yesno</source_model>
+                                    <config_path>mozg_general/resources/active_style_iwd_opc</config_path>
+                                    <sort_order>20</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </active_style_iwd_opc>
+                                <active_checkout_progress_bar translate="label" module="mozg_base">
+                                    <label>Exibir barra de progresso dos processos do pedido</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-base-php_71#-ativar-barra-de-progresso-na-finalização-do-pedido" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>select</frontend_type>
+                                    <source_model>adminhtml/system_config_source_yesno</source_model>
+                                    <config_path>mozg_general/resources/active_checkout_progress_bar</config_path>
+                                    <sort_order>30</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </active_checkout_progress_bar>
+                                <active_button_dump_order translate="label" module="mozg_base">
+                                    <label>Exibir botão "Dump" na visualização do pedido</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-base-php_71#-ativar-botão-dump-na-visualização-do-pedido" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>select</frontend_type>
+                                    <source_model>adminhtml/system_config_source_yesno</source_model>
+                                    <config_path>mozg_general/resources/active_button_dump_order</config_path>
+                                    <sort_order>50</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </active_button_dump_order>
+                                <active_button_google_route_order translate="label" module="mozg_base">
+                                    <label>Exibir botão "Trajeto" na visualização do pedido</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-base-php_71#-ativar-botão-trajeto-na-visualização-do-pedido" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>select</frontend_type>
+                                    <source_model>adminhtml/system_config_source_yesno</source_model>
+                                    <config_path>mozg_general/resources/active_button_google_route_order</config_path>
+                                    <sort_order>60</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </active_button_google_route_order>
+                                <active_new_columns_sales_order translate="label" module="mozg_base">
+                                    <label>Exibir novas colunas na grade de pedidos</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-base-php_71#-ativar-botão-trajeto-na-visualização-do-pedido" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>select</frontend_type>
+                                    <source_model>adminhtml/system_config_source_yesno</source_model>
+                                    <config_path>mozg_general/resources/active_new_columns_sales_order</config_path>
+                                    <sort_order>70</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </active_new_columns_sales_order>
+                                <active_1column_checkout_onepage_success translate="label" module="mozg_base">
+                                    <label>Ativar layout de 1 coluna na página de finalização do pedido</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-base-php_71#-" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>select</frontend_type>
+                                    <source_model>adminhtml/system_config_source_yesno</source_model>
+                                    <config_path>mozg_general/resources/active_1column_checkout_onepage_success</config_path>
+                                    <sort_order>80</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </active_1column_checkout_onepage_success>
+                                <active_boxpacker_sales_order_view translate="label" module="mozg_base">
+                                    <label>Exibir bloco da embalagem na visualização do pedido</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-base-php_71#-" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>select</frontend_type>
+                                    <source_model>adminhtml/system_config_source_yesno</source_model>
+                                    <config_path>mozg_general/resources/active_boxpacker_sales_order_view</config_path>
+                                    <sort_order>90</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </active_boxpacker_sales_order_view>
+                            </fields>
+                        </mozg_base_group_1>
+                        <mozg_base_group_2 type="group" translate="label comment tooltip" module="mozg_base">
+                            <label>Debug</label>
+                            <frontend_type>text</frontend_type>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <sort_order>20</sort_order>
+                            <frontend_model>mozg_base/adminhtml_system_config_fieldset_expanded</frontend_model>
+                            <fields>
+                                <data_modulo translate="label">
+                                    <label>Data Compilação</label>
+                                    <comment></comment>
+                                    <folder_id>base</folder_id>
+                                    <frontend_type>text</frontend_type>
+                                    <frontend_model>mozg_base/adminhtml_system_config_form_field_moduledate</frontend_model>
+                                    <sort_order>7</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </data_modulo>
+                                <export_settings translate="label" module="mozg_base">
+                                    <label></label>
+                                    <comment></comment>
+                                    <button_label>Exportar configurações</button_label>
+                                    <frontend_model>mozg_base/adminhtml_system_config_exportSettings</frontend_model>
+                                    <sort_order>10</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>0</show_in_store>
+                                </export_settings>
+                                <debug_block_name translate="label">
+                                    <label>Exibir nomes dos blocos</label>
+                                    <comment><![CDATA[<a href="https://github.com/mozgbrasil/magento-base-php_71#-exibir-nomes-dos-blocos" target="_blank">__?__</a>]]></comment>
+                                    <frontend_type>select</frontend_type>
+                                    <source_model>adminhtml/system_config_source_yesno</source_model>
+                                    <config_path>mozg_general/resources/debug_block_name</config_path>
+                                    <sort_order>20</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </debug_block_name>
+                            </fields>
+                        </mozg_base_group_2>
+                    </fields>
+                </resources>
+            </groups>
+        </mozg_general>
+        <!--<google translate="label" module="mozg_base">
+            <groups>
+                <google_api_client translate="label" module="mozg_base">
+                    <label>Google APIs</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>20</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <expanded>1</expanded>
+                    <fields>
+                        <mozg_base_group_1 type="group" translate="label comment tooltip" module="mozg_base">
+                            <label>1. Autenticação</label>
+                            <frontend_type>text</frontend_type>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <sort_order>10</sort_order>
+                            <frontend_model>mozg_base/adminhtml_system_config_fieldset_expanded</frontend_model>
+                            <fields>
+                                <active translate="label comment">
+                                    <label>Enabled</label>
+                                    <config_path>mozg_general/google_api_client/active</config_path>
+                                    <frontend_type>select</frontend_type>
+                                    <source_model>adminhtml/system_config_source_yesno</source_model>
+                                    <sort_order>1</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>0</show_in_website>
+                                    <show_in_store>0</show_in_store>
+                                </active>
+                                <api_key translate="label comment">
+                                    <label>API Key</label>
+                                    <config_path>mozg_general/google_api_client/api_key</config_path>
+                                    <frontend_type>text</frontend_type>
+                                    <sort_order>3</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>0</show_in_website>
+                                    <show_in_store>0</show_in_store>
+                                    <depends>
+                                        <active>1</active>
+                                    </depends>
+                                </api_key>
+                                <client_id translate="label comment">
+                                    <label>Client ID</label>
+                                    <config_path>mozg_general/google_api_client/client_id</config_path>
+                                    <frontend_type>text</frontend_type>
+                                    <sort_order>4</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>0</show_in_website>
+                                    <show_in_store>0</show_in_store>
+                                    <depends>
+                                        <active>1</active>
+                                    </depends>
+                                </client_id>
+                                <client_secret translate="label comment">
+                                    <label>Client Secret</label>
+                                    <config_path>mozg_general/google_api_client/client_secret</config_path>
+                                    <frontend_type>text</frontend_type>
+                                    <sort_order>5</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>0</show_in_website>
+                                    <show_in_store>0</show_in_store>
+                                    <depends>
+                                        <active>1</active>
+                                    </depends>
+                                </client_secret>
+                            </fields>
+                        </mozg_base_group_1>
+                        <mozg_base_group_2 type="group" translate="label comment tooltip" module="mozg_base">
+                            <label>Token</label>
+                            <frontend_type>text</frontend_type>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <sort_order>20</sort_order>
+                            <frontend_model>mozg_base/adminhtml_system_config_fieldset_expanded</frontend_model>
+                            <fields>
+                                <token translate="label comment">
+                                    <label>Token</label>
+                                    <frontend_type>text</frontend_type>
+                                    <config_path>mozg_general/google_api_client/token</config_path>
+                                    <frontend_model>mozg_base/adminhtml_system_config_form_field_token</frontend_model>
+                                    <sort_order>6</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>0</show_in_website>
+                                    <show_in_store>0</show_in_store>
+                                </token>
+                            </fields>
+                        </mozg_base_group_2>
+                        <mozg_base_group_3 type="group" translate="label comment tooltip" module="mozg_base">
+                            <label>API</label>
+                            <frontend_type>text</frontend_type>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <sort_order>30</sort_order>
+                            <frontend_model>mozg_base/adminhtml_system_config_fieldset_expanded</frontend_model>
+                            <fields>
+                                <google_check translate="label">
+                                    <label>API</label>
+                                    <comment></comment>
+                                    <folder_id>base</folder_id>
+                                    <frontend_type>text</frontend_type>
+                                    <frontend_model>mozg_base/adminhtml_system_config_form_field_googleapi</frontend_model>
+                                    <sort_order>7</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>1</show_in_store>
+                                </google_check>
+                            </fields>
+                        </mozg_base_group_3>
+                    </fields>
+                </google_api_client>
+            </groups>
+        </google>-->
+    </sections>
+</config>

@@ -1,0 +1,244 @@
+@-webkit-keyframes myanimation {
+    from {
+        left: 0%;
+    }
+    to {
+        left: 50%;
+    }
+}
+.checkout-wrap {
+    color: #444;
+    font-family: 'PT Sans Caption', sans-serif;
+    margin: 40px auto;
+    max-width: 100%;
+    position: relative;
+    z-index: 1;
+}
+#statusOrder ul.checkout-bar {
+    margin: 0 20px;
+}
+#statusOrder ul.label-bar li,
+#statusOrder ul.checkout-bar li {
+    color: #ccc;
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 14px 20px 14px 80px;
+    position: relative;
+}
+#statusOrder ul.checkout-bar li:before {
+    -webkit-box-shadow: inset 2px 2px 2px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 2px 2px 2px 0px rgba(0, 0, 0, 0.2);
+    background: #ddd;
+    border: 2px solid #FFF;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    left: 20px;
+    line-height: 37px;
+    height: 35px;
+    position: absolute;
+    text-align: center;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+    top: 4px;
+    width: 35px;
+    z-index: 999;
+}
+#statusOrder ul.checkout-bar li.active {
+    color: #8bc53f;
+    font-weight: bold;
+}
+#statusOrder ul.checkout-bar li.active:before {
+    background: #8bc53f;
+    z-index: 99999;
+}
+#statusOrder ul.checkout-bar li.visited {
+    background: #ECECEC;
+    color: #57aed1;
+    z-index: 99999;
+}
+#statusOrder ul.checkout-bar li.visited:before {
+    background: #57aed1;
+    z-index: 99999;
+}
+#statusOrder ul.checkout-bar li:nth-child(1):before {
+    content: "1";
+}
+#statusOrder ul.checkout-bar li:nth-child(2):before {
+    content: "2";
+}
+#statusOrder ul.checkout-bar li:nth-child(3):before {
+    content: "3";
+}
+#statusOrder ul.checkout-bar li:nth-child(4):before {
+    content: "4";
+}
+#statusOrder ul.checkout-bar li:nth-child(5):before {
+    content: "5";
+}
+#statusOrder ul.checkout-bar li:nth-child(6):before {
+    content: "6";
+}
+#statusOrder ul.checkout-bar a {
+    color: #57aed1;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+}
+#statusOrder ul.label-bar-bottom li {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 14px 20px 14px 80px;
+    position: relative;
+}
+#statusOrder ul.label-bar-bottom li.active {
+    color: #55a04e;
+}
+#statusOrder ul.label-bar-bottom li.active span {
+    font-size: 13px;
+    font-family: "gotham-book", "Helvetica Neue", Verdana, Arial, sans-serif;
+    color: #444;
+}
+#statusOrder ul.label-bar-bottom li.run {
+    color: #ee9a20;
+}
+#statusOrder ul.checkout-bar li.run:before {
+
+}
+#statusOrder ul.checkout-bar li.active:before {
+
+}
+@media all and (min-width: 800px) {
+    #statusOrder .checkout-bar li.active:after {
+        -webkit-animation: myanimation 3s 0;
+        background-size: 35px 35px;
+        background-color: #8bc53f;
+        background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
+        background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
+        -webkit-box-shadow: inset 2px 2px 2px 0px rgba(0, 0, 0, 0.2);
+        box-shadow: inset 2px 2px 2px 0px rgba(0, 0, 0, 0.2);
+        content: "";
+        height: 15px;
+        width: 100%;
+        left: 50%;
+        position: absolute;
+        top: -50px;
+        z-index: 0;
+    }
+    .checkout-wrap {
+        margin: 10px auto;
+    }
+    #statusOrder ul.checkout-bar {
+        -webkit-box-shadow: inset 2px 2px 2px 0px rgba(0, 0, 0, 0.2);
+        box-shadow: inset 2px 2px 2px 0px rgba(0, 0, 0, 0.2);
+        background-size: 35px 35px;
+        background-color: #EcEcEc;
+        background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.4) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0.4) 75%, transparent 75%, transparent);
+        background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.4) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0.4) 75%, transparent 75%, transparent);
+        border-radius: 15px;
+        height: 15px;
+        margin: 0 auto;
+        padding: 0;
+        width: 100%;
+    }
+    #statusOrder ul.checkout-bar:before {
+        background-size: 35px 35px;
+        background-color: #57aed1;
+        background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
+        background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
+        -webkit-box-shadow: inset 2px 2px 2px 0px rgba(0, 0, 0, 0.2);
+        box-shadow: inset 2px 2px 2px 0px rgba(0, 0, 0, 0.2);
+        border-radius: 15px;
+        content: " ";
+        height: 15px;
+        left: 0;
+        position: absolute;
+        width: 12%;
+    }
+    #statusOrder ul.checkout-bar li {
+        display: inline-block;
+        margin: 50px 0 0;
+        padding: 0;
+        text-align: center;
+        width: 19%;
+    }
+    #statusOrder ul.checkout-bar li:before {
+        height: 45px;
+        left: 40%;
+        line-height: 45px;
+        position: absolute;
+        top: -65px;
+        width: 45px;
+        z-index: 99;
+    }
+    #statusOrder ul.checkout-bar li.visited {
+        background: none;
+    }
+    #statusOrder ul.checkout-bar li.visited:after {
+        background-size: 35px 35px;
+        background-color: #57aed1;
+        background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
+        background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
+        -webkit-box-shadow: inset 2px 2px 2px 0px rgba(0, 0, 0, 0.2);
+        box-shadow: inset 2px 2px 2px 0px rgba(0, 0, 0, 0.2);
+        content: "";
+        height: 15px;
+        left: 50%;
+        position: absolute;
+        top: -50px;
+        width: 100%;
+        z-index: 99;
+    }
+    #statusOrder .checkout-bar li:after {
+        content: "";
+        height: 15px;
+        width: 100%;
+        left: 0;
+        position: absolute;
+        top: -50px;
+        z-index: 0;
+    }
+    #statusOrder ul.checkout-bar,
+    #statusOrder ul.label-bar-bottom,
+    #statusOrder ul.label-bar {
+        margin: 0 auto;
+        padding: 0;
+        width: 100%;
+        font-size: 0;
+    }
+    #statusOrder ul.label-bar-bottom li {
+        display: inline-block;
+        margin: 20px 0;
+        padding: 0;
+        text-align: center;
+        width: 19%;
+        text-transform: uppercase;
+        vertical-align: top;
+    }
+    #statusOrder ul.label-bar li {
+        display: inline-block;
+        margin: 20px 0 30px;
+        padding: 0;
+        text-align: center;
+        width: 19%;
+        text-transform: uppercase;
+    }
+    #statusOrder .checkout-bar li.run:after {
+
+    }
+    #statusOrder .checkout-bar li.active:after {
+
+    }
+    #statusOrder ul.checkout-bar li.active:first-child::after,
+    #statusOrder ul.checkout-bar li.visited:first-child::after,
+    #statusOrder ul.checkout-bar li.run:first-child::after {
+        border-radius: 15px 0 0 15px;
+    }
+    #statusOrder ul.checkout-bar li.active:last-child::after,
+    #statusOrder ul.checkout-bar li.visited:last-child::after,
+    #statusOrder ul.checkout-bar li.run:last-child::after {
+        border-radius: 0 15px 15px 0;
+    }
+}
